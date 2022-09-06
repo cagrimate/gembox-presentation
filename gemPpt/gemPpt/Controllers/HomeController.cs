@@ -26,210 +26,12 @@ public class HomeController : Controller
 
   public IActionResult Index()
   {
-    //// If using Professional version, put your serial key below.
-    //ComponentInfo.SetLicense("FREE-LIMITED-KEY");
-
-    //var presentation = PresentationDocument.Load("sample1.pptx");
-
-    //var sb = new StringBuilder();
-
-    //var slide = presentation.Slides[0];
-
-    ////var width = slide.Content.Drawings.Layout.Width;
-
-    //foreach (var shape in slide.Content.Drawings.OfType<Shape>())
-    //{
-    //  var wit = shape.Name;
-    //  for (int i = 0; i < 4; i++)
-    //  {
-    //    if (shape.Name == ($"bar-{i}"))
-    //    {
-    //      shape.Layout.Width = 100;
-    //    }
-
-    //  }
-
-    //}
-
-    //presentation.Save("1Shape Formatting.pptx");
-
-
+    
     return View();
   }
 
   public IActionResult Privacy()
   {
-
-    ComponentInfo.SetLicense("FREE-LIMITED-KEY");
-
-    var presentation = new PresentationDocument();
-
-    // Create new slide.
-    var slide = presentation.Slides.AddNew(SlideLayoutType.Custom);
-
-
-    // Create new text box.
-
-    double x = 1;
-    double y = 1;
-    double typeX;
-    double typeY = 1.5;
-    double numb;
-    int sayac = 0;
-
-    List<string> words = new List<string>();
-    words.Add("buralara yaz günü kacanım");
-    words.Add("as12345678864345653454");
-    words.Add("as");
-    words.Add("as");
-    words.Add("as");
-    words.Add("as");
-    words.Add("buralara yaz günü kar yağıyor canım");
-    words.Add("bornova");
-    words.Add("anne");
-    words.Add("as");
-    words.Add("buralara yaz günü kar yağıyor canım");
-    words.Add("allah");
-    words.Add("baba");
-    words.Add("galaatsaray");
-    words.Add("allaaaaaah");
-    words.Add("ahsdajshdasd");
-    words.Add("buralara yaz günü kar yağıyor canım");
-    words.Add("asasdasdas");
-    words.Add("asasdasdas");
-    words.Add("asasdasdas");
-    words.Add(" asdasdfas");
-
-
-    foreach (var item in words)
-    {
-      typeX = 2;
-
-      if (item.Length >= 5 && item.Length < 20)
-      {
-        numb = Math.Log(item.Length, 3.2);
-        typeX = typeX * numb;
-      }
-      else if (item.Length >= 20 && item.Length < 30)
-      {
-        numb = Math.Log(item.Length, 2.2);
-        typeX = typeX * numb;
-      }
-      else if (item.Length >= 30)
-      {
-        numb = Math.Log(item.Length, 2);
-        typeX = typeX * numb;
-      }
-
-
-      var sayi = item.Length;
-
-      var textBox = slide.Content.AddTextBox(
-       ShapeGeometryType.RoundedRectangle, x, y, typeX, typeY, LengthUnit.Centimeter);
-
-      textBox.Shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.DarkGray));
-
-      //// Set shape format.
-      textBox.Shape.Format.Fill.SetSolid(Color.FromName(ColorName.LightGray));
-      textBox.Shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.DarkGray));
-      textBox.Shape.Format.Outline.Width = Length.From(1, LengthUnit.Point);
-
-      // Set text box text.
-      textBox.AddParagraph().AddRun(item);
-
-      //// Get text box format.
-      var format = textBox.Format;
-
-      //// Set vertical alignment of the text.
-      format.VerticalAlignment = VerticalAlignment.Middle;
-
-      ////// Set left and top margin.
-      format.InternalMarginLeft = Length.From(3, LengthUnit.Millimeter);
-      //format.InternalMarginTop = Length.From(3, LengthUnit.Millimeter);
-      //format.Centered = true;
-
-      x = x + typeX + 1;
-
-      if (typeX >= 23)
-        y = y + typeY + 0.5;
-
-      if (x >= 30.5)
-      {
-        sayac++;
-        if (sayac % 2 != 0)
-        {
-          //2. satır
-          x = 1.5;
-        }
-        else
-        {
-          //1.satır
-          x = 0.5;
-
-        }
-
-        y = y + typeY + 0.5;
-      }
-
-    }
-
-
-    presentation.Save("Text Box Formatting.pptx");
-
-
-
-    //// If using Professional version, put your serial key below.
-    //ComponentInfo.SetLicense("FREE-LIMITED-KEY");
-
-    //var presentation = new PresentationDocument();
-
-    //// Create new slide.
-    //var slide = presentation.Slides.AddNew(SlideLayoutType.Custom);
-
-    //var textBox = slide.Content.AddTextBox(ShapeGeometryType.Rectangle,
-    //           100, 10, 105, 10, GemBox.Presentation.LengthUnit.Millimeter);
-
-    //textBox.AddParagraph().AddRun("Classification Title");
-
-
-    //// Create new "rounded rectangle" shape.
-    //var shape = slide.Content.AddShape(
-    //    ShapeGeometryType.Rectangle,
-    //           20, 20, 100, 10, GemBox.Presentation.LengthUnit.Millimeter);
-    ////  x eksenindeki yeri  ,  y eksinindeki yeri  ,   x dogrultusunda uzunluk, y doğrultuusndaki genişlik
-
-    //// Get shape format.
-    //var format = shape.Format;
-
-    //// Get shape fill format.
-    //var fillFormat = format.Fill;
-
-    ////---------------------
-    //var presentation1 = new PresentationDocument();
-
-    //// Create new slide.
-    //var slide1 = presentation.Slides.AddNew(SlideLayoutType.Custom);
-
-    //// Create new "rounded rectangle" shape.
-    //var shape1 = slide.Content.AddShape(
-    //    ShapeGeometryType.Rectangle,
-    //           20, 20, 50, 10, GemBox.Presentation.LengthUnit.Millimeter);
-    ////  x eksenindeki yeri  ,  y eksinindeki yeri  ,   x dogrultusunda uzunluk, y doğrultuusndaki genişlik
-
-    //// Get shape format.
-    //var format1 = shape.Format;
-
-    //// Get shape fill format.
-    //var fillFormat1 = format.Fill;
-
-    //shape1.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
-    //shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
-
-
-    ////fillFormat.SetSolid(Color.FromName(ColorName.DarkBlue));
-
-    //presentation.Save("Shape Formatting.pptx");
-
 
     return View();
   }
@@ -285,7 +87,7 @@ public class HomeController : Controller
     value.Add(6);
 
 
-    //------------------GRAFİK BÖLÜMÜ BAŞLANGICI--------------
+    //------------------graphic part started--------------
 
     ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
@@ -316,10 +118,10 @@ public class HomeController : Controller
     // Select data.
     excelChart.SelectData(worksheet.Cells.GetSubrange($"A{1}:B{grafikSayisi}"), true);
 
-    //------------GRAFİK BÖLÜMÜ SONU -----------------
+    //------------graphic part end -----------------
 
 
-    //-----------BALONCUKLU ALAN BAŞLANGICI-------------
+    //-----------buble area start-------------
     foreach (var item in words)
     {
       typeX = 2;
@@ -392,35 +194,22 @@ public class HomeController : Controller
 
     }
 
-    //-----baloncuklu alan sonu -------
+    //-----bubble are end-------
 
-    //ikinci sayfaya geçiyoruz
+    //-----------------------------second page-------
 
-    //yeni slayt oluştuduk
+    //TODO: bu alan tekrarlayacak sekilde düzeltilmesi lazım.
+
+
+    //new slide generated 
 
     var slide2 = presentation.Slides.AddNew(SlideLayoutType.Custom);
 
-    //yeni slayt oluşturma bitti
+    //new slide generated end
 
-
-    //------------------- ortaya atılacak cizgi calısması. ancak dikey yapamadım. TODO DONE
-
-    //// Create new "rounded rectangle" shape.
-    //var shape = slide2.Content.AddShape(
-    //    ShapeGeometryType.Line,
-    //           16.93, 8.53, 10, 0.5, (LengthUnit)VerticalAlignmentStyle.Justify);
-    ////  x eksenindeki yeri  ,  y eksinindeki yeri  ,   x dogrultusunda uzunluk, y doğrultuusndaki genişlik
-
-    //// Get shape format.
-    //var format1 = shape.Format;
-
-    //// Get shape fill format.
-    //var fillFormat1 = format1.Fill;
-
-    //----------------------ortaya atılacak dikey cizgi sonu
 
     string title2 = "DEĞİŞİR BURALAR ";
-    //----------TİTLE----------
+    //----------TITLE----------
     var textBox2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         2, 2, 10, 3, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -428,13 +217,13 @@ public class HomeController : Controller
 
     //-----------title sonu
 
-    //-----------------sol label grafik alanı başlangıcı
+    //-----------------left label graphic area started
 
 
 
-    //----------------------------------------1. label başlangıc ---------------------
+    //----------------------------------------1. label started ---------------------
 
-    //grafik baslangıcı
+    //graph start
     var shape = slide2.Content.AddShape(
         ShapeGeometryType.Rectangle,
                2, 10, 10, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
@@ -442,7 +231,7 @@ public class HomeController : Controller
     var format1 = shape.Format;
     var fillFormat1 = format1.Fill;
 
-    //grafik sonu
+    //graph end
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
     double xDegiskeni = 4;
@@ -457,10 +246,10 @@ public class HomeController : Controller
     var leftLabelTextBox= labelTextBox1.AddParagraph().AddRun(label1);
     leftLabelTextBox.Format.Size = 20;  
 
-    //-----------title silik yazı  sonu
+    //-----------title strong words start
 
     string label2 = "silik yazı ";
-    //----------TİTLE silik yazı adı----------
+    //----------title weak words start----------
     var labelTextBox2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         6.2, 9.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -469,19 +258,19 @@ public class HomeController : Controller
     leftLabel1.Format.Size = 16;
 
 
-    //-----------title silik yazi  sonu
+    //-----------title weak words end
 
     string label3 = "%43 ";
-    //----------TİTLE silik yazı adı----------
+    //----------title percentage words start----------
     var labelTextBox3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         12, 9.9, 2.5, 0.5, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyut = labelTextBox3.AddParagraph().AddRun(label3);
     boyut.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title percentage words end.
 
-    //grafik baslangıcı
+    //graph start
 
     var shape1 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
@@ -492,14 +281,14 @@ public class HomeController : Controller
     shape1.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
-    //grafik sonu
+    //graph end
 
-    //----------------------------------------1. label bitiş ---------------------
+    //----------------------------------------1. label end ---------------------
 
 
-    //----------------------------------------2. label başlangıc ---------------------
+    //----------------------------------------2. label start ---------------------
 
-    //grafik baslangıcı
+    //graph start
     var shape2_1 = slide2.Content.AddShape(
         ShapeGeometryType.Rectangle,
                2, 12, 10, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
@@ -507,7 +296,7 @@ public class HomeController : Controller
     var format2_1 = shape2_1.Format;
     var fillFormat2_1 = format2_1.Fill;
 
-    //grafik sonu
+    //graph end
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
 
@@ -520,10 +309,10 @@ public class HomeController : Controller
     var leftLabelTextBox2_1= labelTextBox2_1.AddParagraph().AddRun(label2_1);
     leftLabelTextBox2_1.Format.Size = 20;
 
-    //-----------title silik yazı  sonu
+    //-----------title strong words start
 
     string label2_2 = "silik yazı ";
-    //----------TİTLE silik yazı adı----------
+    //----------title weak words start----------
     var labelTextBox2_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         6.2, 11.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -531,19 +320,19 @@ public class HomeController : Controller
     leftLabel2.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
     leftLabel2.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title weak words end
 
     string label2_3 = "%43 ";
-    //----------TİTLE silik yazı adı----------
+    //----------title percentage words start----------
     var labelTextBox2_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         12, 11.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyut2_3 = labelTextBox2_3.AddParagraph().AddRun(label2_3);
     boyut2_3.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title percentage words end
 
-    //grafik baslangıcı
+    //graph start
 
     var shape2_4 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
@@ -554,14 +343,14 @@ public class HomeController : Controller
     shape2_4.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shape2_4.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
-    //grafik sonu
+    //graph end
 
-    //----------------------------------------2. label bitiş ---------------------
+    //----------------------------------------2. label end ---------------------
 
 
-    //----------------------------------------3. label başlangıc ---------------------
+    //----------------------------------------3. label start ---------------------
 
-    //grafik baslangıcı
+    //graph start
     var shape3_1 = slide2.Content.AddShape(
         ShapeGeometryType.Rectangle,
                2, 14, 10, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
@@ -569,7 +358,7 @@ public class HomeController : Controller
     var format3_1 = shape3_1.Format;
     var fillFormat3_1 = format3_1.Fill;
 
-    //grafik sonu
+    //graph end
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
 
@@ -582,10 +371,10 @@ public class HomeController : Controller
     var leftLabelTextbox3_1= labelTextBox3_1.AddParagraph().AddRun(label3_1);
     leftLabelTextbox3_1.Format.Size = 20;
 
-    //-----------title silik yazı  sonu
+    //-----------title strong words start
 
     string label3_2 = "silik yazı ";
-    //----------TİTLE silik yazı adı----------
+    //----------title weak words start----------
     var labelTextBox3_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         6.2, 13.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -593,19 +382,19 @@ public class HomeController : Controller
     leftLabel3.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
     leftLabel3.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title weak words end
 
     string label3_3 = "%43 ";
-    //----------TİTLE silik yazı adı----------
+    //----------title percentage words start----------
     var labelTextBox3_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         12, 13.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyut3_3 = labelTextBox3_3.AddParagraph().AddRun(label3_3);
     boyut3_3.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title percentage words end
 
-    //grafik baslangıcı
+    //graph start
 
     var shape3_4 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
@@ -616,14 +405,14 @@ public class HomeController : Controller
     shape3_4.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shape3_4.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
-    //grafik sonu
+    //graph end
 
-    //----------------------------------------3. label bitiş ---------------------
+    //----------------------------------------3. label end ---------------------
 
 
-    //----------------------------------------4. label başlangıc ---------------------
+    //----------------------------------------4. label start ---------------------
 
-    //grafik baslangıcı
+    //graph start
     var shape4_1 = slide2.Content.AddShape(
         ShapeGeometryType.Rectangle,
                2, 16, 10, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
@@ -631,7 +420,7 @@ public class HomeController : Controller
     var format4_1 = shape4_1.Format;
     var fillFormat4_1 = format4_1.Fill;
 
-    //grafik sonu
+    //graph end
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
 
@@ -644,10 +433,10 @@ public class HomeController : Controller
     var leftLabelTextBox4_1= labelTextBox4_1.AddParagraph().AddRun(label4_1);
     leftLabelTextBox4_1.Format.Size = 20;
 
-    //-----------title silik yazı  sonu
+    //-----------title strong words start
 
     string label4_2 = "silik yazı ";
-    //----------TİTLE silik yazı adı----------
+    //----------title weak words start----------
     var labelTextBox4_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         6.2, 15.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -655,19 +444,19 @@ public class HomeController : Controller
     leftLabel4.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
     leftLabel4.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title weak words end
 
     string label4_3 = "%43 ";
-    //----------TİTLE silik yazı adı----------
+    //----------title percentage words start----------
     var labelTextBox4_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         12, 15.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyut4_3 = labelTextBox4_3.AddParagraph().AddRun(label4_3);
     boyut4_3.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title percentage words end
 
-    //grafik baslangıcı
+    //graph start
 
     var shape4_4 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
@@ -678,10 +467,10 @@ public class HomeController : Controller
     shape4_4.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shape4_4.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
-    //grafik sonu
+    //graph end
 
-    //----------------------------------------4. label bitiş ---------------------
-    //_-------------------- sol label grafik alanı bitiş
+    //----------------------------------------4. label end ---------------------
+    //_-------------------- left label graphic area end
 
 
     //--------arada kalan vertical line bölümü başlangıç
@@ -708,7 +497,7 @@ public class HomeController : Controller
 
     //----------------------------------------1. label başlangıc ---------------------
 
-    //grafik baslangıcı
+    //graph start
     var shapes1 = slide2.Content.AddShape(
         ShapeGeometryType.Rectangle,
                20, 10, 10, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
@@ -716,7 +505,7 @@ public class HomeController : Controller
     var formats1_1 = shapes1.Format;
     var fillFormats1_1 = formats1_1.Fill;
 
-    //grafik sonu
+    //graph end
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
 
@@ -729,10 +518,10 @@ public class HomeController : Controller
     var rightLabelTextboxs1_1= labelTextBoxs1_1.AddParagraph().AddRun(labels1_1);
     rightLabelTextboxs1_1.Format.Size = 20;
 
-    //-----------title silik yazı  sonu
+    //-----------title strong words start
 
     string labels2_1 = "silik yazı ";
-    //----------TİTLE silik yazı adı----------
+    //----------title weak words start----------
     var labelTextBoxs2_1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         25, 9.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -740,19 +529,19 @@ public class HomeController : Controller
     rightLabel1.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
     rightLabel1.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title weak words end
 
     string labels3_1 = "%43 ";
-    //----------TİTLE silik yazı adı----------
+    //----------title percentage words start----------
     var labelTextBoxs3_1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         30, 9.85, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyuts1 = labelTextBoxs3_1.AddParagraph().AddRun(labels3_1);
     boyuts1.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title percentage words end
 
-    //grafik baslangıcı
+    //graph start
 
     var shapes1_4 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
@@ -763,7 +552,7 @@ public class HomeController : Controller
     shapes1_4.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shapes1_4.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
-    //grafik sonu
+    //graph end
 
     //2. grafik başlangıcı
     var shapes1_5 = slide2.Content.AddShape(
@@ -776,14 +565,14 @@ public class HomeController : Controller
     shapes1_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
 
 
-    //2. grafik sonu
+    //2. graph end
 
     //----------------------------------------1. label bitiş ---------------------
 
 
     //----------------------------------------2. label başlangıc ---------------------
 
-    //grafik baslangıcı
+    //graph start
     var shapes2_2 = slide2.Content.AddShape(
         ShapeGeometryType.Rectangle,
                20, 12, 10, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
@@ -791,7 +580,7 @@ public class HomeController : Controller
     var formats2_2 = shapes2_2.Format;
     var fillFormats2_2 = formats2_2.Fill;
 
-    //grafik sonu
+    //graph end
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
 
@@ -803,29 +592,29 @@ public class HomeController : Controller
   var rightLabelTextBoxs2_2 =  labelTextBoxs2_2.AddParagraph().AddRun(labels2_2);
     rightLabelTextBoxs2_2.Format.Size = 20;
 
-    //-----------title silik yazı  sonu
+    //-----------title strong words start
 
     string labels2_3 = "silik yazı ";
-    //----------TİTLE silik yazı adı----------
+    //----------title weak words start----------
     var labelTextBoxs2_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         25, 11.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var rightLabel2 = labelTextBoxs2_3.AddParagraph().AddRun(labels2_3);
     rightLabel2.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
     rightLabel2.Format.Size = 16;
-    //-----------title silik yazi  sonu
+    //-----------title weak words end
 
     string labels2_4 = "%43 ";
-    //----------TİTLE silik yazı adı----------
+    //----------title percentage words start----------
     var labelTextBoxs2_4 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         30, 11.85, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyuts2_4 = labelTextBoxs2_4.AddParagraph().AddRun(labels2_4);
     boyuts2_4.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title percentage words end
 
-    //grafik baslangıcı
+    //graph start
 
     var shapes2_5 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
@@ -836,7 +625,7 @@ public class HomeController : Controller
     shapes2_5.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shapes2_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
-    //grafik sonu
+    //graph end
 
     //2. grafik başlangıcı
     var shapes2_6 = slide2.Content.AddShape(
@@ -848,14 +637,14 @@ public class HomeController : Controller
     shapes2_6.Format.Fill.SetSolid(Color.FromName(ColorName.Brown));
     shapes2_6.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
 
-    //2. grafik sonu
+    //2. graph end
 
     //----------------------------------------2. label bitiş ---------------------
 
 
     //----------------------------------------3. label başlangıc ---------------------
 
-    //grafik baslangıcı
+    //graph start
     var shapes3_1 = slide2.Content.AddShape(
         ShapeGeometryType.Rectangle,
                20, 14, 10, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
@@ -863,7 +652,7 @@ public class HomeController : Controller
     var formats3_1 = shapes3_1.Format;
     var fillFormats3_1 = formats3_1.Fill;
 
-    //grafik sonu
+    //graph end
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
 
@@ -876,10 +665,10 @@ public class HomeController : Controller
    var rightLabelTextBoxs3_2= labelTextBoxs3_2.AddParagraph().AddRun(labels3_2);
     rightLabelTextBoxs3_2.Format.Size = 20;
 
-    //-----------title silik yazı  sonu
+    //-----------title strong words start
 
     string labels3_3 = "silik yazı ";
-    //----------TİTLE silik yazı adı----------
+    //----------title weak words start----------
     var labelTextBoxs3_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         25, 13.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -887,19 +676,19 @@ public class HomeController : Controller
     rightLabel3.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
     rightLabel3.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title weak words end
 
     string labels3_4 = "%43 ";
-    //----------TİTLE silik yazı adı----------
+    //----------title percentage words start----------
     var labelTextBoxs3_4 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         30, 13.85, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyuts3_4 = labelTextBoxs3_4.AddParagraph().AddRun(labels3_4);
     boyuts3_4.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title percentage words end
 
-    //grafik baslangıcı
+    //graph start
 
     var shapes3_5 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
@@ -910,7 +699,7 @@ public class HomeController : Controller
     shapes3_5.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shapes3_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
-    //grafik sonu
+    //graph end
 
     //2. grafik başlangıcı
     var shapes3_6 = slide2.Content.AddShape(
@@ -923,7 +712,7 @@ public class HomeController : Controller
     shapes3_6.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
 
 
-    //2. grafik sonu
+    //2. graph end
 
 
     //----------------------------------------3. label bitiş ---------------------
@@ -931,7 +720,7 @@ public class HomeController : Controller
 
     //----------------------------------------4. label başlangıc ---------------------
 
-    //grafik baslangıcı
+    //graph start
     var shapes4_1 = slide2.Content.AddShape(
         ShapeGeometryType.Rectangle,
                20, 16, 10, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
@@ -939,7 +728,7 @@ public class HomeController : Controller
     var formats4_1 = shapes4_1.Format;
     var fillFormats4_1 = formats4_1.Fill;
 
-    //grafik sonu
+    //graph end
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
 
@@ -952,10 +741,10 @@ public class HomeController : Controller
    var rightLabelTextBoxs4_2= labelTextBoxs4_2.AddParagraph().AddRun(labels4_2);
     rightLabelTextBoxs4_2.Format.Size = 20;
 
-    //-----------title silik yazı  sonu
+    //-----------title strong words start
 
     string labels4_3 = "silik yazı ";
-    //----------TİTLE silik yazı adı----------
+    //----------title weak words start----------
     var labelTextBoxs4_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         25, 15.15, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -963,19 +752,19 @@ public class HomeController : Controller
     rightLabel4.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
     rightLabel4.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title weak words end
 
     string labels4_4 = "%43 ";
-    //----------TİTLE silik yazı adı----------
+    //----------title percentage words start----------
     var labelTextBoxs4_4 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         30, 15.85, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyuts4_4 = labelTextBoxs4_4.AddParagraph().AddRun(labels4_4);
     boyuts4_4.Format.Size = 16;
 
-    //-----------title silik yazi  sonu
+    //-----------title percentage words end
 
-    //grafik baslangıcı
+    //graph start
 
     var shapes4_5 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
@@ -986,7 +775,7 @@ public class HomeController : Controller
     shapes4_5.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shapes4_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
-    //grafik sonu
+    //graph end
     //2. grafik başlangıcı
     var shapes4_6 = slide2.Content.AddShape(
    ShapeGeometryType.Rectangle,
@@ -998,7 +787,7 @@ public class HomeController : Controller
     shapes4_6.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
 
 
-    //2. grafik sonu
+    //2. graph end
 
     //----------------------------------------4. label bitiş ---------------------
 
