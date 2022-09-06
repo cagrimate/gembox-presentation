@@ -445,6 +445,7 @@ public class HomeController : Controller
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
     double xDegiskeni = 4;
+    double x2Degiskeni = 2;
 
 
     string label1 = "sentiment adı ";
@@ -726,13 +727,26 @@ public class HomeController : Controller
     var shapes1_4 = slide2.Content.AddShape(
     ShapeGeometryType.Rectangle,
            20, 10, xDegiskeni, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
-    var formats2_4 = shape.Format;
-    var fillFormats2_4 = formats2_4.Fill;
+    var formats1_4 = shape.Format;
+    var fillFormats1_4 = formats1_4.Fill;
 
     shapes1_4.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
     shapes1_4.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
     //grafik sonu
+
+    //2. grafik başlangıcı
+    var shapes1_5 = slide2.Content.AddShape(
+   ShapeGeometryType.Rectangle,
+          xDegiskeni+20, 10, x2Degiskeni, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+    var formats1_5 = shape.Format;
+    var fillFormats1_5 = formats1_5.Fill;
+
+    shapes1_5.Format.Fill.SetSolid(Color.FromName(ColorName.Brown));
+    shapes1_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
+
+
+    //2. grafik sonu
 
     //----------------------------------------1. label bitiş ---------------------
 
@@ -793,6 +807,18 @@ public class HomeController : Controller
 
     //grafik sonu
 
+    //2. grafik başlangıcı
+    var shapes2_6 = slide2.Content.AddShape(
+   ShapeGeometryType.Rectangle,
+          xDegiskeni + 20, 12, x2Degiskeni, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+    var formats2_6 = shape.Format;
+    var fillFormats2_6 = formats2_6.Fill;
+
+    shapes2_6.Format.Fill.SetSolid(Color.FromName(ColorName.Brown));
+    shapes2_6.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
+
+    //2. grafik sonu
+
     //----------------------------------------2. label bitiş ---------------------
 
 
@@ -852,6 +878,20 @@ public class HomeController : Controller
 
     //grafik sonu
 
+    //2. grafik başlangıcı
+    var shapes3_6 = slide2.Content.AddShape(
+   ShapeGeometryType.Rectangle,
+          xDegiskeni + 20, 14, x2Degiskeni, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+    var formats3_6 = shape.Format;
+    var fillFormats3_6 = formats3_6.Fill;
+
+    shapes3_6.Format.Fill.SetSolid(Color.FromName(ColorName.Brown));
+    shapes3_6.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
+
+
+    //2. grafik sonu
+
+
     //----------------------------------------3. label bitiş ---------------------
 
 
@@ -910,6 +950,18 @@ public class HomeController : Controller
     shapes4_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
 
     //grafik sonu
+    //2. grafik başlangıcı
+    var shapes4_6 = slide2.Content.AddShape(
+   ShapeGeometryType.Rectangle,
+          xDegiskeni + 20, 16, x2Degiskeni, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+    var formats4_6 = shape.Format;
+    var fillFormats4_6 = formats4_6.Fill;
+
+    shapes4_6.Format.Fill.SetSolid(Color.FromName(ColorName.Brown));
+    shapes4_6.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
+
+
+    //2. grafik sonu
 
     //----------------------------------------4. label bitiş ---------------------
 
