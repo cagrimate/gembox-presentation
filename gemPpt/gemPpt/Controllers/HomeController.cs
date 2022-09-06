@@ -286,10 +286,8 @@ public class HomeController : Controller
 
     //------------------GRAFİK BÖLÜMÜ BAŞLANGICI--------------
 
-    // If using Professional version, put your GemBox.Presentation serial key below.
     ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-    // If using Professional version, put your GemBox.Spreadsheet serial key below.
     SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
 
     var presentation = new PresentationDocument();
