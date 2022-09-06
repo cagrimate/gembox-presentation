@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GemBox.Presentation" Version="25.0.1296" />
+    <PackageReference Include="GemBox.Spreadsheet" Version="49.0.1084" />
+  </ItemGroup>
+
+</Project>
