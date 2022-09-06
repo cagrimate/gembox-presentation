@@ -317,7 +317,7 @@ public class HomeController : Controller
 
     //------------GRAFİK BÖLÜMÜ SONU -----------------
 
-    
+
     //-----------BALONCUKLU ALAN BAŞLANGICI-------------
     foreach (var item in words)
     {
@@ -471,7 +471,7 @@ public class HomeController : Controller
     var labelTextBox3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         12.5, 9.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
-   var boyut= labelTextBox3.AddParagraph().AddRun(label3);
+    var boyut = labelTextBox3.AddParagraph().AddRun(label3);
     boyut.Format.Size = 16;
 
     //-----------title silik yazi  sonu
@@ -670,6 +670,19 @@ public class HomeController : Controller
     //_-------------------- sol label grafik alanı bitiş
 
 
+    //--------arada kalan vertical line bölümü başlangıç
+
+    var shapeLine = slide2.Content.AddShape(
+        ShapeGeometryType.Rectangle,
+               16.5, 9, 0.01, 9, GemBox.Presentation.LengthUnit.Centimeter);
+
+    var formatLine = shapeLine.Format;
+    var fillFormatLine = formatLine.Fill;
+    shapeLine.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+    shapeLine.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.DarkGray));
+
+
+    //---------vertical line bölüm bitiş
 
 
 
@@ -738,7 +751,7 @@ public class HomeController : Controller
     //2. grafik başlangıcı
     var shapes1_5 = slide2.Content.AddShape(
    ShapeGeometryType.Rectangle,
-          xDegiskeni+20, 10, x2Degiskeni, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+          xDegiskeni + 20, 10, x2Degiskeni, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
     var formats1_5 = shape.Format;
     var fillFormats1_5 = formats1_5.Fill;
 
@@ -831,7 +844,7 @@ public class HomeController : Controller
 
     var formats3_1 = shapes3_1.Format;
     var fillFormats3_1 = formats3_1.Fill;
-    
+
     //grafik sonu
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
