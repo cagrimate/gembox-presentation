@@ -403,7 +403,7 @@ public class HomeController : Controller
     //yeni slayt oluşturma bitti
 
 
-    //------------------- ortaya atılacak cizgi calısması. ancak dikey yapamadım. TODO
+    //------------------- ortaya atılacak cizgi calısması. ancak dikey yapamadım. TODO DONE
 
     //// Create new "rounded rectangle" shape.
     //var shape = slide2.Content.AddShape(
@@ -454,17 +454,19 @@ public class HomeController : Controller
     var labelTextBox1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         2, 9, 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBox1.AddParagraph().AddRun(label1);
+    var leftLabelTextBox= labelTextBox1.AddParagraph().AddRun(label1);
+    leftLabelTextBox.Format.Size = 20;  
 
     //-----------title silik yazı  sonu
 
     string label2 = "silik yazı ";
     //----------TİTLE silik yazı adı----------
     var labelTextBox2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        6.2, 9, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        6.2, 9.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var leftLabel1 = labelTextBox2.AddParagraph().AddRun(label2);
     leftLabel1.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+    leftLabel1.Format.Size = 16;
 
 
     //-----------title silik yazi  sonu
@@ -472,7 +474,7 @@ public class HomeController : Controller
     string label3 = "%43 ";
     //----------TİTLE silik yazı adı----------
     var labelTextBox3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        12.5, 9.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
+        12, 9.9, 2.5, 0.5, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyut = labelTextBox3.AddParagraph().AddRun(label3);
     boyut.Format.Size = 16;
@@ -513,26 +515,28 @@ public class HomeController : Controller
     string label2_1 = "sentiment adı ";
     //----------TİTLE sentiment adı----------
     var labelTextBox2_1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        2, 11, 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        2, 11 , 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBox2_1.AddParagraph().AddRun(label2_1);
+    var leftLabelTextBox2_1= labelTextBox2_1.AddParagraph().AddRun(label2_1);
+    leftLabelTextBox2_1.Format.Size = 20;
 
     //-----------title silik yazı  sonu
 
     string label2_2 = "silik yazı ";
     //----------TİTLE silik yazı adı----------
     var labelTextBox2_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        6.2, 11, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        6.2, 11.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var leftLabel2 = labelTextBox2_2.AddParagraph().AddRun(label2_2);
     leftLabel2.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+    leftLabel2.Format.Size = 16;
 
     //-----------title silik yazi  sonu
 
     string label2_3 = "%43 ";
     //----------TİTLE silik yazı adı----------
     var labelTextBox2_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        12.5, 11.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
+        12, 11.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyut2_3 = labelTextBox2_3.AddParagraph().AddRun(label2_3);
     boyut2_3.Format.Size = 16;
@@ -573,26 +577,28 @@ public class HomeController : Controller
     string label3_1 = "sentiment adı ";
     //----------TİTLE sentiment adı----------
     var labelTextBox3_1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        2, 13, 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        2, 13 , 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBox3_1.AddParagraph().AddRun(label3_1);
+    var leftLabelTextbox3_1= labelTextBox3_1.AddParagraph().AddRun(label3_1);
+    leftLabelTextbox3_1.Format.Size = 20;
 
     //-----------title silik yazı  sonu
 
     string label3_2 = "silik yazı ";
     //----------TİTLE silik yazı adı----------
     var labelTextBox3_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        6.2, 13, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        6.2, 13.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var leftLabel3 = labelTextBox3_2.AddParagraph().AddRun(label3_2);
     leftLabel3.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+    leftLabel3.Format.Size = 16;
 
     //-----------title silik yazi  sonu
 
     string label3_3 = "%43 ";
     //----------TİTLE silik yazı adı----------
     var labelTextBox3_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        12.5, 13.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
+        12, 13.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyut3_3 = labelTextBox3_3.AddParagraph().AddRun(label3_3);
     boyut3_3.Format.Size = 16;
@@ -633,26 +639,28 @@ public class HomeController : Controller
     string label4_1 = "sentiment adı ";
     //----------TİTLE sentiment adı----------
     var labelTextBox4_1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        2, 15, 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        2, 15 , 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBox4_1.AddParagraph().AddRun(label4_1);
+    var leftLabelTextBox4_1= labelTextBox4_1.AddParagraph().AddRun(label4_1);
+    leftLabelTextBox4_1.Format.Size = 20;
 
     //-----------title silik yazı  sonu
 
     string label4_2 = "silik yazı ";
     //----------TİTLE silik yazı adı----------
     var labelTextBox4_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        6.2, 15, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        6.2, 15.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var leftLabel4 = labelTextBox4_2.AddParagraph().AddRun(label4_2);
     leftLabel4.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+    leftLabel4.Format.Size = 16;
 
     //-----------title silik yazi  sonu
 
     string label4_3 = "%43 ";
     //----------TİTLE silik yazı adı----------
     var labelTextBox4_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        12.5, 15.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
+        12, 15.9, 2.5, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var boyut4_3 = labelTextBox4_3.AddParagraph().AddRun(label4_3);
     boyut4_3.Format.Size = 16;
@@ -716,19 +724,21 @@ public class HomeController : Controller
     string labels1_1 = "sentiment adı ";
     //----------TİTLE sentiment adı----------
     var labelTextBoxs1_1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        20, 9, 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        20, 9 , 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBoxs1_1.AddParagraph().AddRun(labels1_1);
+    var rightLabelTextboxs1_1= labelTextBoxs1_1.AddParagraph().AddRun(labels1_1);
+    rightLabelTextboxs1_1.Format.Size = 20;
 
     //-----------title silik yazı  sonu
 
     string labels2_1 = "silik yazı ";
     //----------TİTLE silik yazı adı----------
     var labelTextBoxs2_1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        25, 9, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        25, 9.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var rightLabel1 = labelTextBoxs2_1.AddParagraph().AddRun(labels2_1);
     rightLabel1.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+    rightLabel1.Format.Size = 16;
 
     //-----------title silik yazi  sonu
 
@@ -785,24 +795,24 @@ public class HomeController : Controller
 
     //TODO buradaki x genişliği değişebilir olması lazım ki değere göre değişmiş olsun
 
-
     string labels2_2 = "sentiment adı ";
     //----------TİTLE sentiment adı----------
     var labelTextBoxs2_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        20, 11, 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        20, 11 , 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBoxs2_2.AddParagraph().AddRun(labels2_2);
+  var rightLabelTextBoxs2_2 =  labelTextBoxs2_2.AddParagraph().AddRun(labels2_2);
+    rightLabelTextBoxs2_2.Format.Size = 20;
 
     //-----------title silik yazı  sonu
 
     string labels2_3 = "silik yazı ";
     //----------TİTLE silik yazı adı----------
     var labelTextBoxs2_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        25, 11, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        25, 11.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
     var rightLabel2 = labelTextBoxs2_3.AddParagraph().AddRun(labels2_3);
     rightLabel2.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
-
+    rightLabel2.Format.Size = 16;
     //-----------title silik yazi  sonu
 
     string labels2_4 = "%43 ";
@@ -861,19 +871,21 @@ public class HomeController : Controller
     string labels3_2 = "sentiment adı ";
     //----------TİTLE sentiment adı----------
     var labelTextBoxs3_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        20, 13, 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        20, 13 , 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBoxs3_2.AddParagraph().AddRun(labels3_2);
+   var rightLabelTextBoxs3_2= labelTextBoxs3_2.AddParagraph().AddRun(labels3_2);
+    rightLabelTextBoxs3_2.Format.Size = 20;
 
     //-----------title silik yazı  sonu
 
     string labels3_3 = "silik yazı ";
     //----------TİTLE silik yazı adı----------
     var labelTextBoxs3_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        25, 13, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        25, 13.15, 3, 1, GemBox.Presentation.LengthUnit.Centimeter);
 
    var rightLabel3= labelTextBoxs3_3.AddParagraph().AddRun(labels3_3);
     rightLabel3.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+    rightLabel3.Format.Size = 16;
 
     //-----------title silik yazi  sonu
 
@@ -935,19 +947,21 @@ public class HomeController : Controller
     string labels4_2 = "sentiment adı ";
     //----------TİTLE sentiment adı----------
     var labelTextBoxs4_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        20, 15, 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        20, 15 , 4.7, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBoxs4_2.AddParagraph().AddRun(labels4_2);
+   var rightLabelTextBoxs4_2= labelTextBoxs4_2.AddParagraph().AddRun(labels4_2);
+    rightLabelTextBoxs4_2.Format.Size = 20;
 
     //-----------title silik yazı  sonu
 
     string labels4_3 = "silik yazı ";
     //----------TİTLE silik yazı adı----------
     var labelTextBoxs4_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-        25, 15, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
+        25, 15.15, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
     var rightLabel4= labelTextBoxs4_3.AddParagraph().AddRun(labels4_3);
     rightLabel4.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+    rightLabel4.Format.Size = 16;
 
     //-----------title silik yazi  sonu
 
