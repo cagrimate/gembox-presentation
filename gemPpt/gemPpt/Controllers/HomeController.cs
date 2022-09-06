@@ -10,6 +10,7 @@ using Color = GemBox.Presentation.Color;
 using System.Text;
 using LengthUnit = GemBox.Presentation.LengthUnit;
 using Org.BouncyCastle.Crypto;
+using Org.BouncyCastle.Asn1.X500;
 
 
 namespace gemPpt.Controllers;
@@ -462,7 +463,9 @@ public class HomeController : Controller
     var labelTextBox2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         6.2, 9, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBox2.AddParagraph().AddRun(label2);
+    var leftLabel1 = labelTextBox2.AddParagraph().AddRun(label2);
+    leftLabel1.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
+
 
     //-----------title silik yazi  sonu
 
@@ -521,7 +524,8 @@ public class HomeController : Controller
     var labelTextBox2_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         6.2, 11, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBox2_2.AddParagraph().AddRun(label2_2);
+    var leftLabel2 = labelTextBox2_2.AddParagraph().AddRun(label2_2);
+    leftLabel2.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
 
     //-----------title silik yazi  sonu
 
@@ -580,7 +584,8 @@ public class HomeController : Controller
     var labelTextBox3_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         6.2, 13, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBox3_2.AddParagraph().AddRun(label3_2);
+    var leftLabel3 = labelTextBox3_2.AddParagraph().AddRun(label3_2);
+    leftLabel3.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
 
     //-----------title silik yazi  sonu
 
@@ -639,7 +644,8 @@ public class HomeController : Controller
     var labelTextBox4_2 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         6.2, 15, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBox4_2.AddParagraph().AddRun(label4_2);
+    var leftLabel4 = labelTextBox4_2.AddParagraph().AddRun(label4_2);
+    leftLabel4.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
 
     //-----------title silik yazi  sonu
 
@@ -721,7 +727,8 @@ public class HomeController : Controller
     var labelTextBoxs2_1 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         25, 9, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBoxs2_1.AddParagraph().AddRun(labels2_1);
+    var rightLabel1 = labelTextBoxs2_1.AddParagraph().AddRun(labels2_1);
+    rightLabel1.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
 
     //-----------title silik yazi  sonu
 
@@ -793,7 +800,8 @@ public class HomeController : Controller
     var labelTextBoxs2_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         25, 11, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBoxs2_3.AddParagraph().AddRun(labels2_3);
+    var rightLabel2 = labelTextBoxs2_3.AddParagraph().AddRun(labels2_3);
+    rightLabel2.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
 
     //-----------title silik yazi  sonu
 
@@ -864,7 +872,8 @@ public class HomeController : Controller
     var labelTextBoxs3_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         25, 13, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBoxs3_3.AddParagraph().AddRun(labels3_3);
+   var rightLabel3= labelTextBoxs3_3.AddParagraph().AddRun(labels3_3);
+    rightLabel3.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
 
     //-----------title silik yazi  sonu
 
@@ -937,7 +946,8 @@ public class HomeController : Controller
     var labelTextBoxs4_3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
         25, 15, 3, 0.7, GemBox.Presentation.LengthUnit.Centimeter);
 
-    labelTextBoxs4_3.AddParagraph().AddRun(labels4_3);
+    var rightLabel4= labelTextBoxs4_3.AddParagraph().AddRun(labels4_3);
+    rightLabel4.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
 
     //-----------title silik yazi  sonu
 
