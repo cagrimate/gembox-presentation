@@ -296,6 +296,7 @@ public class HomeController : Controller
     var slide = presentation.Slides.AddNew(SlideLayoutType.Custom);
 
     // Add simple PowerPoint presentation title.
+    //TODO title eklenecek.
 
     // Create PowerPoint chart and add it to slide.
     var chart = slide.Content.AddChart(GemBox.Presentation.ChartType.Column,
