@@ -305,7 +305,6 @@ public class HomeController : Controller
     ExcelChart excelChart = (ExcelChart)chart.ExcelChart;
     ExcelWorksheet worksheet = excelChart.Worksheet;
 
-    // Add data for Excel chart.
     for (int i = 2; i <= grafikSayisi; i++)
     {
       worksheet.Cells[$"A{i}"].Value = words[i - 2];
@@ -317,7 +316,7 @@ public class HomeController : Controller
 
     //------------GRAFİK BÖLÜMÜ SONU -----------------
 
-
+    
     //-----------BALONCUKLU ALAN BAŞLANGICI-------------
     foreach (var item in words)
     {
