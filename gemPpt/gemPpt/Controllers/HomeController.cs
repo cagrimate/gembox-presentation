@@ -246,6 +246,9 @@ public class HomeController : Controller
       var format1 = shape.Format;
       var fillFormat1 = format1.Fill;
 
+      shape.Format.Fill.SetSolid(Color.FromRgb(232, 232, 232));
+      //shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.LightGray));
+
       //graph end
 
       string label1 = "sentiment adı ";
@@ -289,8 +292,8 @@ public class HomeController : Controller
       var format2 = shape.Format;
       var fillFormat2 = format2.Fill;
 
-      shape1.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
-      shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
+      shape1.Format.Fill.SetSolid(Color.FromName(ColorName.Orange));
+      //shape1.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Orange));
 
       //graph end
 
@@ -314,8 +317,8 @@ public class HomeController : Controller
 
     var formatLine = shapeLine.Format;
     var fillFormatLine = formatLine.Fill;
-    shapeLine.Format.Fill.SetSolid(Color.FromName(ColorName.Gray));
-    shapeLine.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.DarkGray));
+    shapeLine.Format.Fill.SetSolid(Color.FromName(ColorName.LightGray));
+    //shapeLine.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.LightGray));
 
 
     //---------vertical line bölüm bitiş
@@ -342,6 +345,8 @@ public class HomeController : Controller
 
       var formats1_1 = shapes1.Format;
       var fillFormats1_1 = formats1_1.Fill;
+      shapes1.Format.Fill.SetSolid(Color.FromRgb(128, 125, 126));
+
 
       //graph end
 
@@ -387,8 +392,8 @@ public class HomeController : Controller
       var formats1_4 = shapes1_4.Format;
       var fillFormats1_4 = formats1_4.Fill;
 
-      shapes1_4.Format.Fill.SetSolid(Color.FromName(ColorName.Yellow));
-      shapes1_4.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Green));
+      shapes1_4.Format.Fill.SetSolid(Color.FromRgb(155, 181, 40));
+      //shapes1_4.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Orange));
 
       //graph end
 
@@ -400,7 +405,7 @@ public class HomeController : Controller
       var fillFormats1_5 = formats1_5.Fill;
 
       shapes1_5.Format.Fill.SetSolid(Color.FromName(ColorName.Brown));
-      shapes1_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
+      //shapes1_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
 
 
       //graph positions
