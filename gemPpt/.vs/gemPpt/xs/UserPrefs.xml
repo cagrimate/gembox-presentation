@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{A9FE510B-E10A-4BC7-9016-359C13F9BC20}|Default">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.gemPpt PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/Controllers/HomeController.cs" relfile="gemPpt/Controllers/HomeController.cs" line="103" column="1" />
-      <Breakpoint file="/Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/Controllers/HomeController.cs" relfile="gemPpt/Controllers/HomeController.cs" line="266" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="gemPpt/Controllers/HomeController.cs">
     <Files>
-      <File FileName="gemPpt/Controllers/HomeController.cs" Line="280" Column="18" />
+      <File FileName="gemPpt/Controllers/HomeController.cs" Line="290" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,4 +24,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
 </Properties>
