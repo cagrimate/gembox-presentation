@@ -44,7 +44,7 @@ public class HomeController : Controller
     double x = 1;
     double y = 12;
     double typeX;
-    double typeY = 1.5;
+    double typeY = 1;
     double numb;
     int sayac = 0;
 
