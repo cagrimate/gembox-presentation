@@ -98,10 +98,6 @@ public class HomeController : Controller
     // Add new PowerPoint presentation slide.
     var slide = presentation.Slides.AddNew(SlideLayoutType.Custom);
 
-    // Add simple PowerPoint presentation title.
-    //TODO title eklenecek.
-
-    // Create PowerPoint chart and add it to slide.
     var chart = slide.Content.AddChart(GemBox.Presentation.ChartType.Column,
         20, 20, 300, 90, GemBox.Presentation.LengthUnit.Millimeter);
 
@@ -112,7 +108,7 @@ public class HomeController : Controller
     for (int i = 2; i <= grafikSayisi; i++)
     {
       worksheet.Cells[$"A{i}"].Value = words[i - 2];
-      worksheet.Cells[$"B{i}"].Value = value[i - 2];
+      worksheet.Cells[$"B{i}"].Value = value[i - 2]; //buraya tarihler gelecek. bu yuzden tarihleri farklı bir listede tutmak gerekecek.
     }
 
     // Select data.
@@ -148,16 +144,15 @@ public class HomeController : Controller
       var textBox1 = slide.Content.AddTextBox(
        ShapeGeometryType.RoundedRectangle, x, y, typeX, typeY, LengthUnit.Centimeter);
 
-      textBox1.Shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.DarkGray));
 
       //// Set shape format.
-      textBox1.Shape.Format.Fill.SetSolid(Color.FromName(ColorName.LightGray));
-      textBox1.Shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.DarkGray));
+      textBox1.Shape.Format.Fill.SetSolid(Color.FromRgb(115, 112, 112));
+      textBox1.Shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Black));
       textBox1.Shape.Format.Outline.Width = Length.From(1, LengthUnit.Point);
 
       // Set text box text.
-      textBox1.AddParagraph().AddRun(item);
-
+      var text = textBox1.AddParagraph().AddRun(item);
+      text.Format.Fill.SetSolid(Color.FromRgb(255, 255, 255));
       //// Get text box format.
       var format = textBox1.Format;
 
@@ -276,7 +271,7 @@ public class HomeController : Controller
       string label3 = "%43 ";
       //----------title percentage words start----------
       var labelTextBox3 = slide2.Content.AddTextBox(ShapeGeometryType.Rectangle,
-         wordPositionX + 10, wordPositionY +0.85, 2.5, 0.5, GemBox.Presentation.LengthUnit.Centimeter);
+         wordPositionX + 10, wordPositionY + 0.85, 2.5, 0.5, GemBox.Presentation.LengthUnit.Centimeter);
 
       var boyut = labelTextBox3.AddParagraph().AddRun(label3);
       boyut.Format.Size = 16;
