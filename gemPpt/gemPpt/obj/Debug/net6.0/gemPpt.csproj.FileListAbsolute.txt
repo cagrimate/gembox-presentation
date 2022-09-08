@@ -92,3 +92,5 @@
 /Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/obj/Debug/net6.0/gemPpt.pdb
 /Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/obj/Debug/net6.0/gemPpt.genruntimeconfig.cache
 /Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/obj/Debug/net6.0/ref/gemPpt.dll
+/Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/bin/Debug/net6.0/RestSharp.dll
+/Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/bin/Debug/net6.0/Newtonsoft.Json.dll

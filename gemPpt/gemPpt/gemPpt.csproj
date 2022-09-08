@@ -10,9 +10,11 @@
     <PackageReference Include="GemBox.Presentation" Version="25.0.1296" />
     <PackageReference Include="GemBox.Spreadsheet" Version="49.0.1084" />
     <PackageReference Include="RestSharp" Version="108.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="RestSharp" />
+    <None Remove="Newtonsoft.Json" />
   </ItemGroup>
 </Project>
