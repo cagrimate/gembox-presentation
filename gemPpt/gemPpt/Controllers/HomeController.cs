@@ -89,41 +89,13 @@ public class HomeController : Controller
     }
 
     List<string> words = new List<string>();
-    words.Add("baba");
-    words.Add("galaatsaray");
-    words.Add("allaaaaaah");
-    words.Add("ahsdajshdasd");
-    words.Add("buralara yaz günü kar yağıyor canım");
-    words.Add("asasdasdas");
-    words.Add("galaatsaray");
-    words.Add("allaaaaaah");
-    words.Add("ahsdajshdasd");
-    words.Add("galaatsaray");
-    words.Add("allaaaaaah");
-    words.Add("ahsdajshdasd");
-    words.Add("galaatsaray");
-    words.Add("allaaaaaah");
-    words.Add("ahsdajshdasd");
+    
 
     int grafikSayisi = words.Count;  //burası words değil dates count olarak değil
 
 
     List<int> value = new List<int>();
-    value.Add(3);
-    value.Add(4);
-    value.Add(1);
-    value.Add(6);
-    value.Add(7);
-    value.Add(9);
-    value.Add(8);
-    value.Add(7);
-    value.Add(6);
-    value.Add(5);
-    value.Add(4);
-    value.Add(3);
-    value.Add(2);
-    value.Add(2);
-    value.Add(6);
+
 
 
     //------------------graphic part started--------------
