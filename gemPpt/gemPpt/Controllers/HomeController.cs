@@ -55,35 +55,38 @@ public class HomeController : Controller
     double numb;
     int sayac = 0;
 
-    //api request start
-    string apiUrl = "https://dummyjson.com/";
-    RestClient restClient = new(apiUrl);
 
-    RestRequest restRequest = new("products", Method.Get);
+    string reportJson, statisticsJson;
 
-    RestResponse<dynamic> response = restClient.Execute<dynamic>(restRequest);
+    using (StreamReader streamReader = new("report.json"))
+      reportJson = streamReader.ReadToEnd();
 
-    // Beautify response
-    dynamic parsedJson = JsonConvert.DeserializeObject(response.Content);
-    var json = JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
-    int count = 0;
+    using (StreamReader streamReader = new("statistics.json"))
+      statisticsJson = streamReader.ReadToEnd();
 
-    List<dynamic> titles = new List<dynamic>();
-    List<dynamic> brands = new List<dynamic>();
+    dynamic report = JsonConvert.DeserializeObject<dynamic>(reportJson);
+    dynamic statistics = JsonConvert.DeserializeObject<dynamic>(statisticsJson);
 
-    foreach (dynamic item in parsedJson.products)
+    string reportTitle = report.title ?? report.name;
+
+    foreach (var model in statistics.models)
     {
-      titles.Add(item.title);
+      string modelName = model.name;
+
+      foreach (var label in model.statistics)
+      {
+        string labelName = label.name;
+        string labelCount = label.count;
+        string labelPercentage = label.percentage;
+      }
     }
 
-    foreach(dynamic item in parsedJson.products)
+    foreach (var topic in statistics.topics)
     {
-      brands.Add(item.brand);
+      string topicName = topic.name;
+      string topicCount = topic.count;
+      string topicPercentage = topic.percentage;
     }
-    Console.WriteLine("count" + count);
-    //api request end.
-
-
 
     List<string> words = new List<string>();
     words.Add("baba");
@@ -182,8 +185,8 @@ public class HomeController : Controller
 
 
       //// Set shape format.
-      textBox1.Shape.Format.Fill.SetSolid(Color.FromRgb(115, 112, 112));
-      textBox1.Shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Black));
+      textBox1.Shape.Format.Fill.SetSolid(Color.FromRgb(127,127,127));
+      textBox1.Shape.Format.Outline.Fill.SetNone();
       textBox1.Shape.Format.Outline.Width = Length.From(1, LengthUnit.Point);
 
       // Set text box text.
@@ -255,7 +258,7 @@ public class HomeController : Controller
 
 
       //----------TITLE----------
-      string title2 = "DEĞİŞİR BURALAR ";
+      string title2 = "";
       var textBox2 = slides[$"slide{j}"].Content.AddTextBox(ShapeGeometryType.Rectangle,
           2, 2, 10, 3, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -275,8 +278,8 @@ public class HomeController : Controller
         var format1 = shape.Format;
         var fillFormat1 = format1.Fill;
 
-        shape.Format.Fill.SetSolid(Color.FromRgb(232, 232, 232));
-        //shape.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.LightGray));
+        shape.Format.Fill.SetSolid(Color.FromRgb(242, 242, 242));
+        shape.Format.Outline.Fill.SetNone();
 
         //graph end
 
@@ -321,8 +324,8 @@ public class HomeController : Controller
         var format2 = shape.Format;
         var fillFormat2 = format2.Fill;
 
-        shape1.Format.Fill.SetSolid(Color.FromName(ColorName.Orange));
-        //shape1.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Orange));
+        shape1.Format.Fill.SetSolid(Color.FromRgb(255,192,0));
+        shape1.Format.Outline.Fill.SetNone();
 
         //graph end
 
@@ -346,7 +349,8 @@ public class HomeController : Controller
 
       var formatLine = shapeLine.Format;
       var fillFormatLine = formatLine.Fill;
-      shapeLine.Format.Fill.SetSolid(Color.FromName(ColorName.LightGray));
+      shapeLine.Format.Fill.SetSolid(Color.FromRgb(127,127,127));
+      shapeLine.Format.Fill.SetNone();
 
       //---------vertical line bölüm bitiş
 
@@ -372,7 +376,8 @@ public class HomeController : Controller
 
         var formats1_1 = shapes1.Format;
         var fillFormats1_1 = formats1_1.Fill;
-        shapes1.Format.Fill.SetSolid(Color.FromRgb(128, 125, 126));
+        shapes1.Format.Fill.SetSolid(Color.FromRgb(127,127,127));
+        shapes1.Format.Outline.Fill.SetNone();
 
 
         //graph end
@@ -419,8 +424,8 @@ public class HomeController : Controller
         var formats1_4 = shapes1_4.Format;
         var fillFormats1_4 = formats1_4.Fill;
 
-        shapes1_4.Format.Fill.SetSolid(Color.FromRgb(155, 181, 40));
-        //shapes1_4.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Orange));
+        shapes1_4.Format.Fill.SetSolid(Color.FromRgb(155, 187, 89));
+        shapes1_4.Format.Outline.Fill.SetNone();
 
         //graph end
 
@@ -431,8 +436,8 @@ public class HomeController : Controller
         var formats1_5 = shapes1_5.Format;
         var fillFormats1_5 = formats1_5.Fill;
 
-        shapes1_5.Format.Fill.SetSolid(Color.FromName(ColorName.Brown));
-        //shapes1_5.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.Brown));
+        shapes1_5.Format.Fill.SetSolid(Color.FromRgb(149,55,53));
+        shapes1_5.Format.Outline.Fill.SetNone();
 
 
         //graph positions

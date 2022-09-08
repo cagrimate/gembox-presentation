@@ -1,0 +1,60 @@
+﻿{
+  "id": 21711,
+  "client": {
+    "id": 1,
+    "code": "9946daa1-8ae1-433b-a1b5-b151a805bff9",
+    "name": "Kimola",
+    "type": 1
+  },
+  "memberID": 42171,
+  "language": "tr",
+  "languageName": "Turkish",
+  "code": "03cbf5ab-1caa-4a44-94b7-2505263aa828",
+  "name": "Spor Tekstil Sosyal Dinleme Kitlesi-513162c1-8ddf-4bad-8312-b01a92d5ec6f.xlsx",
+  "title": "GS Store - Ağustos Raporu",
+  "description": null,
+  "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "url": "https://hangwire.blob.core.windows.net/reports/03cbf5ab-1caa-4a44-94b7-2505263aa828.xlsx",
+  "sheetIndex": 3,
+  "textColumnIndex": 6,
+  "urlColumnIndex": 16,
+  "dateColumnIndex": 17,
+  "completionRatio": 1,
+  "completionPercentage": 100,
+  "isCompleted": true,
+  "size": 3930,
+  "models": [
+    {
+      "id": 150993,
+      "name": "Eczacıbaşı Spor Kulübü - Sentiment",
+      "title": null,
+      "description": null,
+      "language": "tr"
+    },
+    {
+      "id": 150936,
+      "name": "Spor Kulübü Giyim Markaları Modeli",
+      "title": null,
+      "description": null,
+      "language": "tr"
+    },
+    {
+      "id": 150932,
+      "name": "Miscellaneous - Sentiment Classifier / TR",
+      "title": null,
+      "description": null,
+      "language": "tr"
+    }
+  ],
+  "pieces": [
+    {
+      "id": 140306,
+      "name": "Consumer Sentiment Classifier",
+      "title": null,
+      "description": null,
+      "language": "tr"
+    }
+  ],
+  "isStrict": false,
+  "createdDate": "2022-09-05T12:43:09.557"
+}

@@ -94,3 +94,5 @@
 /Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/obj/Debug/net6.0/ref/gemPpt.dll
 /Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/bin/Debug/net6.0/RestSharp.dll
 /Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/bin/Debug/net6.0/report.json
+/Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/bin/Debug/net6.0/statistics.json

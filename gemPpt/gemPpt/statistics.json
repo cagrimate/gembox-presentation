@@ -1,0 +1,372 @@
+﻿{
+  "dates": [
+    {
+      "date": "2022-07-31T00:00:00Z",
+      "count": 2
+    },
+    {
+      "date": "2022-08-01T00:00:00Z",
+      "count": 63
+    },
+    {
+      "date": "2022-08-02T00:00:00Z",
+      "count": 154
+    },
+    {
+      "date": "2022-08-03T00:00:00Z",
+      "count": 169
+    },
+    {
+      "date": "2022-08-04T00:00:00Z",
+      "count": 149
+    },
+    {
+      "date": "2022-08-05T00:00:00Z",
+      "count": 160
+    },
+    {
+      "date": "2022-08-06T00:00:00Z",
+      "count": 437
+    },
+    {
+      "date": "2022-08-07T00:00:00Z",
+      "count": 189
+    },
+    {
+      "date": "2022-08-08T00:00:00Z",
+      "count": 160
+    },
+    {
+      "date": "2022-08-09T00:00:00Z",
+      "count": 228
+    },
+    {
+      "date": "2022-08-10T00:00:00Z",
+      "count": 256
+    },
+    {
+      "date": "2022-08-11T00:00:00Z",
+      "count": 177
+    },
+    {
+      "date": "2022-08-12T00:00:00Z",
+      "count": 130
+    },
+    {
+      "date": "2022-08-13T00:00:00Z",
+      "count": 142
+    },
+    {
+      "date": "2022-08-14T00:00:00Z",
+      "count": 62
+    },
+    {
+      "date": "2022-08-15T00:00:00Z",
+      "count": 47
+    },
+    {
+      "date": "2022-08-16T00:00:00Z",
+      "count": 32
+    },
+    {
+      "date": "2022-08-17T00:00:00Z",
+      "count": 0
+    },
+    {
+      "date": "2022-08-18T00:00:00Z",
+      "count": 74
+    },
+    {
+      "date": "2022-08-19T00:00:00Z",
+      "count": 144
+    },
+    {
+      "date": "2022-08-20T00:00:00Z",
+      "count": 33
+    },
+    {
+      "date": "2022-08-21T00:00:00Z",
+      "count": 47
+    },
+    {
+      "date": "2022-08-22T00:00:00Z",
+      "count": 77
+    },
+    {
+      "date": "2022-08-23T00:00:00Z",
+      "count": 67
+    },
+    {
+      "date": "2022-08-24T00:00:00Z",
+      "count": 138
+    },
+    {
+      "date": "2022-08-25T00:00:00Z",
+      "count": 90
+    },
+    {
+      "date": "2022-08-26T00:00:00Z",
+      "count": 70
+    },
+    {
+      "date": "2022-08-27T00:00:00Z",
+      "count": 337
+    },
+    {
+      "date": "2022-08-28T00:00:00Z",
+      "count": 119
+    },
+    {
+      "date": "2022-08-29T00:00:00Z",
+      "count": 99
+    },
+    {
+      "date": "2022-08-30T00:00:00Z",
+      "count": 23
+    },
+    {
+      "date": "2022-08-31T00:00:00Z",
+      "count": 55
+    }
+  ],
+  "models": [
+    {
+      "id": 150932,
+      "name": "Miscellaneous - Sentiment Classifier / TR",
+      "type": "Model",
+      "language": "tr",
+      "englishName": "Turkish",
+      "statistics": [
+        {
+          "name": "negatif",
+          "count": 1559,
+          "percentage": 40
+        },
+        {
+          "name": "nötr",
+          "count": 1401,
+          "percentage": 36
+        },
+        {
+          "name": "pozitif",
+          "count": 970,
+          "percentage": 25
+        }
+      ]
+    },
+    {
+      "id": 150936,
+      "name": "Spor Kulübü Giyim Markaları Modeli",
+      "type": "Model",
+      "language": "tr",
+      "englishName": "Turkish",
+      "statistics": [
+        {
+          "name": "Diğer",
+          "count": 3277,
+          "percentage": 83
+        },
+        {
+          "name": "Tasarım",
+          "count": 197,
+          "percentage": 5
+        },
+        {
+          "name": "Fiyat",
+          "count": 185,
+          "percentage": 5
+        },
+        {
+          "name": "Stok",
+          "count": 140,
+          "percentage": 4
+        },
+        {
+          "name": "Mağaza",
+          "count": 99,
+          "percentage": 3
+        },
+        {
+          "name": "Kalite",
+          "count": 32,
+          "percentage": 1
+        }
+      ]
+    },
+    {
+      "id": 150993,
+      "name": "Eczacıbaşı Spor Kulübü - Sentiment",
+      "type": "Model",
+      "language": "tr",
+      "englishName": "Turkish",
+      "statistics": [
+        {
+          "name": "Negatif",
+          "count": 1630,
+          "percentage": 41
+        },
+        {
+          "name": "Pozitif",
+          "count": 1184,
+          "percentage": 30
+        },
+        {
+          "name": "Nötr",
+          "count": 1116,
+          "percentage": 28
+        }
+      ]
+    },
+    {
+      "id": 140306,
+      "name": "Consumer Sentiment Classifier",
+      "type": "Piece",
+      "language": "tr",
+      "englishName": "Turkish",
+      "statistics": [
+        {
+          "name": "negatif",
+          "count": 1559,
+          "percentage": 40
+        },
+        {
+          "name": "nötr",
+          "count": 1401,
+          "percentage": 36
+        },
+        {
+          "name": "pozitif",
+          "count": 970,
+          "percentage": 25
+        }
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "name": "ada",
+      "count": 42,
+      "percentage": 1
+    },
+    {
+      "name": "Allah",
+      "count": 41,
+      "percentage": 1
+    },
+    {
+      "name": "aslan",
+      "count": 40,
+      "percentage": 1
+    },
+    {
+      "name": "besiktas",
+      "count": 82,
+      "percentage": 2
+    },
+    {
+      "name": "beşiktaş",
+      "count": 36,
+      "percentage": 1
+    },
+    {
+      "name": "Beşiktaş",
+      "count": 33,
+      "percentage": 1
+    },
+    {
+      "name": "fenerbahçe",
+      "count": 41,
+      "percentage": 1
+    },
+    {
+      "name": "Fenerium",
+      "count": 1070,
+      "percentage": 27
+    },
+    {
+      "name": "galatasaray",
+      "count": 175,
+      "percentage": 4
+    },
+    {
+      "name": "Galatasaray SK",
+      "count": 74,
+      "percentage": 2
+    },
+    {
+      "name": "gs",
+      "count": 370,
+      "percentage": 9
+    },
+    {
+      "name": "hafta",
+      "count": 51,
+      "percentage": 1
+    },
+    {
+      "name": "hoca",
+      "count": 50,
+      "percentage": 1
+    },
+    {
+      "name": "kartal",
+      "count": 55,
+      "percentage": 1
+    },
+    {
+      "name": "kişi",
+      "count": 56,
+      "percentage": 1
+    },
+    {
+      "name": "Nike",
+      "count": 39,
+      "percentage": 1
+    },
+    {
+      "name": "sezon",
+      "count": 124,
+      "percentage": 3
+    },
+    {
+      "name": "şimdi",
+      "count": 65,
+      "percentage": 2
+    },
+    {
+      "name": "siyah",
+      "count": 35,
+      "percentage": 1
+    },
+    {
+      "name": "transfer",
+      "count": 111,
+      "percentage": 3
+    },
+    {
+      "name": "yaz",
+      "count": 40,
+      "percentage": 1
+    },
+    {
+      "name": "yer",
+      "count": 51,
+      "percentage": 1
+    },
+    {
+      "name": "yıldız",
+      "count": 44,
+      "percentage": 1
+    },
+    {
+      "name": "yönetim",
+      "count": 43,
+      "percentage": 1
+    },
+    {
+      "name": "zaman",
+      "count": 125,
+      "percentage": 3
+    }
+  ]
+}
