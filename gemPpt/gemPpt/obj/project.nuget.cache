@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VCmYqbQKLcrtvx+oj4sF+SiO84+hXv/iAj7a/uqPxzXYFK5aACAbzDfw8pI7+9EhJPWVttQPqczyIvV7pUpo2Q==",
+  "dgSpecHash": "3JvKvTkykQomIWFBfQCKGe7N+sT+0W0FoWytvBL/n6C+NLd/3KN20iGz/geWO9shXT7LRyLyDlmcudhjanpwmw==",
   "success": true,
   "projectFilePath": "/Users/cagritumer/Documents/GitHub/gembox-presentation/gemPpt/gemPpt/gemPpt.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/Users/cagritumer/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "/Users/cagritumer/.nuget/packages/microsoft.win32.systemevents/5.0.0/microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "/Users/cagritumer/.nuget/packages/portable.bouncycastle/1.8.9/portable.bouncycastle.1.8.9.nupkg.sha512",
+    "/Users/cagritumer/.nuget/packages/restsharp/108.0.1/restsharp.108.0.1.nupkg.sha512",
     "/Users/cagritumer/.nuget/packages/skiasharp/2.80.3/skiasharp.2.80.3.nupkg.sha512",
     "/Users/cagritumer/.nuget/packages/system.drawing.common/5.0.0/system.drawing.common.5.0.0.nupkg.sha512",
     "/Users/cagritumer/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
