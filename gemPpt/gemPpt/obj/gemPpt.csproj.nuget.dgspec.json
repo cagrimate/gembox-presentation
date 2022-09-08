@@ -45,6 +45,10 @@
             "GemBox.Spreadsheet": {
               "target": "Package",
               "version": "[49.0.1084, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.1, )"
             }
           },
           "imports": [
