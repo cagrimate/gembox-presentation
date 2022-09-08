@@ -11,7 +11,14 @@ using System.Text;
 using LengthUnit = GemBox.Presentation.LengthUnit;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Asn1.X500;
-
+using System.Threading;
+using RestSharp;
+using RestSharp.Authenticators;
+using static System.Net.WebRequestMethods;
+using Org.BouncyCastle.Utilities;
+using System.Xml;
+using Newtonsoft.Json;
+using Formatting = Newtonsoft.Json.Formatting;
 
 namespace gemPpt.Controllers;
 
@@ -47,6 +54,35 @@ public class HomeController : Controller
     double typeY = 1;
     double numb;
     int sayac = 0;
+
+    //api request start
+    string apiUrl = "https://dummyjson.com/";
+    RestClient restClient = new(apiUrl);
+
+    RestRequest restRequest = new("products", Method.Get);
+
+    RestResponse<dynamic> response = restClient.Execute<dynamic>(restRequest);
+
+    // Beautify response
+    dynamic parsedJson = JsonConvert.DeserializeObject(response.Content);
+    var json = JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
+    int count = 0;
+
+    List<dynamic> titles = new List<dynamic>();
+    List<dynamic> brands = new List<dynamic>();
+
+    foreach (dynamic item in parsedJson.products)
+    {
+      titles.Add(item.title);
+    }
+
+    foreach(dynamic item in parsedJson.products)
+    {
+      brands.Add(item.brand);
+    }
+    Console.WriteLine("count" + count);
+    //api request end.
+
 
 
     List<string> words = new List<string>();
@@ -161,7 +197,7 @@ public class HomeController : Controller
 
       // Set left and top margin.
       format.InternalMarginLeft = Length.From(3, LengthUnit.Millimeter);
-     
+
 
       x = x + typeX + 1;
 
