@@ -66,7 +66,7 @@ public class HomeController : Controller
     words.Add("allaaaaaah");
     words.Add("ahsdajshdasd");
 
-    int grafikSayisi = words.Count;
+    int grafikSayisi = words.Count;  //burası words değil dates count olarak değil
 
 
     List<int> value = new List<int>();
@@ -159,10 +159,9 @@ public class HomeController : Controller
       //// Set vertical alignment of the text.
       format.VerticalAlignment = VerticalAlignment.Middle;
 
-      ////// Set left and top margin.
+      // Set left and top margin.
       format.InternalMarginLeft = Length.From(3, LengthUnit.Millimeter);
-      //format.InternalMarginTop = Length.From(3, LengthUnit.Millimeter);
-      //format.Centered = true;
+     
 
       x = x + typeX + 1;
 
@@ -191,18 +190,9 @@ public class HomeController : Controller
 
     //-----bubble are end-------
 
-    //-----------------------------second page-------
-
-    //TODO: bu alan tekrarlayacak sekilde düzeltilmesi lazım.
-
-
-
-    //-----------title sonu
 
     //-----------------left label graphic area started
 
-
-   
 
     Dictionary<string, Slide> slides = new Dictionary<string, Slide>();
 
@@ -228,11 +218,8 @@ public class HomeController : Controller
       slides.Add($"slide{j}", presentation.Slides.AddNew(SlideLayoutType.Custom));
 
 
-      //new slide generated end
-
-
-      string title2 = "DEĞİŞİR BURALAR ";
       //----------TITLE----------
+      string title2 = "DEĞİŞİR BURALAR ";
       var textBox2 = slides[$"slide{j}"].Content.AddTextBox(ShapeGeometryType.Rectangle,
           2, 2, 10, 3, GemBox.Presentation.LengthUnit.Centimeter);
 
@@ -324,8 +311,6 @@ public class HomeController : Controller
       var formatLine = shapeLine.Format;
       var fillFormatLine = formatLine.Fill;
       shapeLine.Format.Fill.SetSolid(Color.FromName(ColorName.LightGray));
-      //shapeLine.Format.Outline.Fill.SetSolid(Color.FromName(ColorName.LightGray));
-
 
       //---------vertical line bölüm bitiş
 
@@ -428,10 +413,6 @@ public class HomeController : Controller
       //---------sağ label grafik alanı bitiş
 
     }
-
-
-
-
 
     presentation.Save("Created Chart.pptx");
     return View();
