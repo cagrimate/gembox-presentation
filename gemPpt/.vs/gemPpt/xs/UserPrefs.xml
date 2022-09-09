@@ -1,13 +1,16 @@
 ﻿<Properties StartupConfiguration="{A9FE510B-E10A-4BC7-9016-359C13F9BC20}|Default">
-  <MonoDevelop.Ide.ItemProperties.gemPpt PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.gemPpt PreferredExecutionTarget="/Applications/Opera.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="gemPpt/Controllers/HomeController.cs">
     <Files>
-      <File FileName="gemPpt/Controllers/HomeController.cs" Line="290" Column="1" />
+      <File FileName="gemPpt/Controllers/HomeController.cs" Line="78" Column="1" />
+      <File FileName="gemPpt/statistics.json" Line="8" Column="27" />
+      <File FileName="gemPpt/report.json" Line="27" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,6 +18,7 @@
           <Node name="gemPpt" expanded="True">
             <Node name="gemPpt" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Created Chart.pptx" selected="True" />
             </Node>
           </Node>
         </State>
@@ -24,5 +28,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
 </Properties>
